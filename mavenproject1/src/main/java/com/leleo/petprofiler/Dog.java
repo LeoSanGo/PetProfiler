@@ -16,4 +16,8 @@ public class Dog extends Pet{
         
     }
     
+    public String selfDescrible(){
+        return "Fun dog looking to make friends!" + super.selfDecrible();
+    }
+    
 }

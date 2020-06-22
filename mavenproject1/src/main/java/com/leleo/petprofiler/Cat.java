@@ -17,5 +17,7 @@ public class Cat extends Pet{
     }
     
     
-    
+    public String selfDescrible(){
+        return "Fun cat ready to party" + super.selfDecrible();
+    }
 }
