@@ -11,8 +11,8 @@ package com.leleo.petprofiler;
  */
 public class Pet {
     
-    private String name = "";
-    private int age = 0;
+    protected String name = "";
+    protected int age = 0;
     private int ageMultiplier = 1;
     
     
