@@ -13,6 +13,7 @@ public class Pet {
     
     private String name = "";
     private int age = 0;
+    private int ageMultiplier = 1;
     
     
     public Pet (String someName, int someAge){
@@ -21,10 +22,23 @@ public class Pet {
         
     }
     
+    public Pet (String someName, int someAge, int someMultiplier){
+        name = someName;
+        age  = someAge;
+        ageMultiplier = someMultiplier;
+        
+    }
+    
+    
+    
     public String selfDecrible(){
         return "Hello, my name is " + name + ". I am " +
-        + age +  "year(s) old.";
+        + calculateRealAge() +  "in human year(s).";
         
+    }
+    
+    public int calculateRealAge(){
+        return age * ageMultiplier;
     }
             
 }
