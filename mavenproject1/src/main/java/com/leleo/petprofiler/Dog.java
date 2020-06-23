@@ -16,8 +16,9 @@ public class Dog extends Pet{
         
     }
     
+    @Override
     public String selfDescrible(){
-        return "Fun dog looking to make friends!" + super.selfDecrible();
+        return "Fun dog looking to make friends! " + super.selfDescrible();
     }
     
 }

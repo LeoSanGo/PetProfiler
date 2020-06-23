@@ -29,11 +29,9 @@ public class Pet {
         
     }
     
-    
-    
-    public String selfDecrible(){
+    public String selfDescrible(){
         return "Hello, my name is " + name + ". I am " +
-        + calculateRealAge() +  "in human year(s).";
+        + calculateRealAge() +  " in human year(s).";
         
     }
     

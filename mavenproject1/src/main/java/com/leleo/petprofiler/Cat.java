@@ -17,7 +17,8 @@ public class Cat extends Pet{
     }
     
     
+    @Override 
     public String selfDescrible(){
-        return "Fun cat ready to party" + super.selfDecrible();
+        return "Fun cat ready to party " + super.selfDescrible();
     }
 }

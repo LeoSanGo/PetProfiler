@@ -16,9 +16,10 @@ public class Goldfish extends Pet{
         super(someName, someAge);
     }
     
+    @Override
     public String selfDescrible(){
         return "Hello, my name is " + name + ". I am a goldfish and I am " +
-                age + "years old. I swim around and nap all the day";
+                age + " years old. I swim around and nap all the day";
     }
     
 }

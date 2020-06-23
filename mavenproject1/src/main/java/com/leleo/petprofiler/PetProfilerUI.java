@@ -142,6 +142,7 @@ public class PetProfilerUI extends javax.swing.JFrame {
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Profile"));
 
         profileTextArea.setColumns(20);
+        profileTextArea.setLineWrap(true);
         profileTextArea.setRows(5);
         jScrollPane1.setViewportView(profileTextArea);
 
@@ -239,7 +240,7 @@ public class PetProfilerUI extends javax.swing.JFrame {
     private void catButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_catButtonActionPerformed
         
         Pet myPet = new Cat(getNameEntered(), getYearsEntererd());
-        String description = myPet.selfDecrible();
+        String description = myPet.selfDescrible();
         profileTextArea.setText(description);
     }//GEN-LAST:event_catButtonActionPerformed
 
@@ -259,13 +260,13 @@ public class PetProfilerUI extends javax.swing.JFrame {
 
     private void dogButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dogButtonActionPerformed
         Pet myPet = new Dog(getNameEntered(), getYearsEntererd());
-        String description = myPet.selfDecrible();
+        String description = myPet.selfDescrible();
         profileTextArea.setText(description);
     }//GEN-LAST:event_dogButtonActionPerformed
 
     private void goldfishButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_goldfishButtonActionPerformed
         Pet myPet = new Goldfish(getNameEntered(), getYearsEntererd());
-        String description = myPet.selfDecrible();
+        String description = myPet.selfDescrible();
         profileTextArea.setText(description);
     }//GEN-LAST:event_goldfishButtonActionPerformed
 
