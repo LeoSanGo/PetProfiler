@@ -102,8 +102,18 @@ public class PetProfilerUI extends javax.swing.JFrame {
         });
 
         dogButton.setText("Dog");
+        dogButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dogButtonActionPerformed(evt);
+            }
+        });
 
         goldfishButton.setText("GoldFish");
+        goldfishButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                goldfishButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -152,8 +162,18 @@ public class PetProfilerUI extends javax.swing.JFrame {
         );
 
         resetButton.setText("Reset");
+        resetButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                resetButtonActionPerformed(evt);
+            }
+        });
 
         exitButton.setText("Exit");
+        exitButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exitButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -217,12 +237,37 @@ public class PetProfilerUI extends javax.swing.JFrame {
     
     
     private void catButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_catButtonActionPerformed
-        // TODO add your handling code here:
+        
+        Pet myPet = new Cat(getNameEntered(), getYearsEntererd());
+        String description = myPet.selfDecrible();
+        profileTextArea.setText(description);
     }//GEN-LAST:event_catButtonActionPerformed
 
     private void nameTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameTextFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_nameTextFieldActionPerformed
+
+    private void exitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitButtonActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_exitButtonActionPerformed
+
+    private void resetButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetButtonActionPerformed
+        nameTextField.setText("");
+        yearsTextField.setText("");
+        profileTextArea.setText("");
+    }//GEN-LAST:event_resetButtonActionPerformed
+
+    private void dogButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dogButtonActionPerformed
+        Pet myPet = new Dog(getNameEntered(), getYearsEntererd());
+        String description = myPet.selfDecrible();
+        profileTextArea.setText(description);
+    }//GEN-LAST:event_dogButtonActionPerformed
+
+    private void goldfishButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_goldfishButtonActionPerformed
+        Pet myPet = new Goldfish(getNameEntered(), getYearsEntererd());
+        String description = myPet.selfDecrible();
+        profileTextArea.setText(description);
+    }//GEN-LAST:event_goldfishButtonActionPerformed
 
     /**
      * @param args the command line arguments
